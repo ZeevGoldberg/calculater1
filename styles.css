@@ -1,5 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 *, *::before, *::after{
-    box-sizing: border-box;
-    font-family: 'Mouse Memoirs', sans-serif;
+  box-sizing: border-box;
+  font-family: 'Pacifico', cursive, sans-serif;
+  font-weight:normal;
+}
+
+html {
+  font-size:62.5%;
+}
+body{
+  padding: 0;
+  margin: 0;
+  background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+.calculator_grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height:100vh;
+  grid-template-columns: repeat(4, 10rem);
+  grid-template-rows: minmax(12rem, auto) repeat(5, 10rem);
+}
+
+button{
+  curser:pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  border-radius: 2px;
+  background-color: rgba(189, 242, 237, .75);
+}
+
+button:hover{
+  background-color: rgba(189, 242, 237, .9);
+}
+
+.two_span {
+  grid-column: span 2;
+}
+
+.output{
+  grid-column: 1 / -1;
+  background-color: rgba(0,0,0,.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  color:white;
+  padding: 1rem;
+  word-wrap: break-word;
+  word-break:break-all;
+}
+
+.previous-operand{
+    font-size: 3rem;
+    color: #facdfa;
+}
+
+.current-operand{
+    font-size: 5rem;
+    color: #f5edf5;
 }

@@ -1,52 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- הכותרת של המסמך -->
-    <title>Calculator</title>
-    <!-- הכנסתי את הקובץ סיאסאס בתוך החלק של ההד -->
-    <link href="styles.css" rel="stylesheet" />
-    <!-- את הקובץ גאוה סקריפט מכניסים פה ומוסיפים את המילה דפר על מנת לומר שהסקריפט עובד אחרי שהמסמך עלה -->
-    <script src="script.js" defer></script>
-    <!-- פה הכנסתי פונט שמקורו בגוגל פונטס -->
-  </head>
-  <body>
-    <!-- עכשיו מתחילים להכניס את מבנה האתר בתוך הבודי -->
-    <!--  נתחיל בדיב הראשון שזה בעצם הקונטיינר הכללי של הכללי וצריך להבחין שקודם יוצרים תבנית כללית של כל הטבלה ורק אז מתקדמים לקונטיינר נפרד לכל רמה נוספת -->
-    <div class="calculator-grid">
-      <!-- עכשיו אני יוצרים שכבה פנימית נוספת למסך של המחשבון -->
-      <div class="output">
-        <!-- ובתוך השכבה הזאת אנחנו יוצרים שתי שורות לחישוב ולתוצאה - לכן צריך שני דיבים -->
-        <div class="previous-operand"></div>
-        <div class="current-operand"></div>
-        <!-- כרגע בנינו שני קונטיינרים פנימיים על מנת להכניס שתי שורות במחשבון - לזכור, תמיד יש קונטיינר בתוך קונטיינר בתוך עוד קונטיינר - הכל לפי רמת השכבות של המוצר -->
-      </div>
-      <!-- כרגע סיימנו עם הדיב של המסך למחשבון ולכן אנחנו עוברים לכפתורים של המחשבון - לשים לב שזה עדיין בתוך הדיב הראשי של המחשבון -->
-      <!-- יש לשים לב שרצינו פה כפתורים בעלי נפח כפול ולכן צריך להגדיר עוד קלאס לכפתורים אלו -->
-      <button class="span-two">All Clear</button>
-      <!-- כפתור למחוק רק ספרה אחת אחורה, ולא את הכל -->
-      <button>Del</button>
-      <!-- את הסימן של החילוק אפשר למצוא בחיפוש בגוגל -->
-      <button>÷</button>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>*</button>
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button>+</button>
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button>-</button>
-      <button>.</button>
-      <button>0</button>
-      <!-- לכפתור של השווה נתנו נפח כפול ולכן שמנו לו את הקלאס של הכפול -->
-      <button class="span-two">=</button>
-      <!-- סיימנו את הכפתורים ולכן סוגרים את הקנטיינר הראשי - אז היה לנו דיב למסך, ורשימת כפתורים ועכשיו צריך לסדר אותם, אבל זה כל הקוד -->
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+<div class="calculator_grid">
+  <div class="output">
+    <div class="previous-operand"></div>
+    <div class="current-operand"></div>
+  </div>
+    <button class="two_span">AC</button>
+    <button>DEL</button>
+    <button>÷</button>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>*</button>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button>+</button>
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button>-</button>
+    <button>.</button>
+    <button>0</button>
+    <button class="two_span">=</button>
+  </div>
+</div>
+</body>
 </html>
