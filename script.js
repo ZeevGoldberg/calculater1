@@ -10,7 +10,6 @@ class Calculator{
         this.currentOperand = ''
         this.operation = undefined
     }
-
     delete(){
 
     }
@@ -31,16 +30,38 @@ class Calculator{
         }
         // קודם כל נכניס את הזמני לתוך הפונקציה
         this.operation = operation
-        // נעביר את השורה הגדולה לעליונה ואז נאפס אותה
+        // נעביר את השורה הגדולה לעליונה ואז נאותה
         this.previousOperand = this.currentOperand
         this.currentOperand = ''
     }
 
     compute(){
-
+        let computation
+        const prev = parseFloat(this.previousOperand)
+        const current = parseFloat(this.currentOperand)
+        if (isNaN(prev) || isNaN(current)) return
+        switch (this.operation) {
+            case '+':
+                computation = prev + current
+                break
+            case '-':
+                computation = prev - current
+                break
+            case '*':
+                computation = prev * current
+                break
+            case '÷':
+                computation = prev / current
+                break
+            default:
+                return
+        }
+        this.operation = undefined
+        this.currentOperand = computation
+        this.previousOperand = ''
     }
 
-    updateDispley(){
+    updateDispley() {
         // לוקח את מה שבתוך הנעלם ושם אותו בתור טקסט לתצוגה
         this.currentOperandTextElement.innerText = this.currentOperand
         this.previousOperandTextElement.innerText = this.previousOperand
@@ -73,4 +94,13 @@ operationButtons.forEach(button => {
         calculator.chooseOperation(button.innerText)
         calculator.updateDispley()
     })
+})
+
+equalsButton.addEventListener('click', button =>{
+    calculator.compute()
+    calculator.updateDispley()
+})
+allClearButton.addEventListener('click', button =>{
+    calculator.clear()
+    calculator.updateDispley()
 })
